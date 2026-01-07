@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Hospital Appointment Booking System</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Hospital Appointment Booking System</h1>
+        <p>A web-based platform for booking hospital appointments.</p>
+
+        <!-- Simple Navigation Menu -->
+        <nav class="main-nav">
+            <a href="#home">Home</a> |
+            <a href="#doctors">Doctors</a> |
+            <a href="#appointment">Book Appointment</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+        <hr>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome to Our Hospital</h2>
+        <p>
+            This website serves as an online hospital appointment booking system where you can browse a list of doctors, review their specialities, and submit appointment requests through a simple form. The design focuses on showing information in a clear and organized way so that you can quickly understand their options and choose a suitable doctor and time. It is developed to demonstrate how a basic web‑based solution can make the appointment booking process more structured, efficient, and easy to use.
+        </p>
+
+        <p>
+            <strong>Main Features:</strong>
+        </p>
+        <ul>
+            <li>Patients can easily book a doctor’s appointment without standing in a long queue at the hospital.</li>
+            <li>Patients can see different doctors and their specialities, so they can choose a suitable doctor more confidently.</li>
+            <li>Patients can select a preferred date and time, which helps them plan their visit better and avoid unnecessary waiting.</li>
+            <li>It makes the overall experience more convenient for both patients and hospital staff, because basic information and appointment requests come through a clear, structured form.</li>
+        </ul>
+        <hr>
+    </section>
+
+    <!-- Doctors Section -->
+   <section id="doctors" class="card doctors-section">
+    <h2>Our Doctors</h2>
+    <p>Below is a list of available doctors for appointment booking.</p>
+
+    <div class="doctor-list">
+
+        <div class="doctor-card">
+            <h3>Dr. A. Rahman</h3>
+            <p class="spec">Child Specialist</p>
+            <p class="days"><strong>Days:</strong> Sun, Tue, Thu</p>
+            <p class="time"><strong>Time:</strong> 4:00 PM – 7:00 PM</p>
+        </div>
+
+        <div class="doctor-card">
+            <h3>Dr. B. Akter</h3>
+            <p class="spec">Skin Specialist</p>
+            <p class="days"><strong>Days:</strong> Mon, Wed</p>
+            <p class="time"><strong>Time:</strong> 5:00 PM – 8:00 PM</p>
+        </div>
+
+        <div class="doctor-card">
+            <h3>Dr. K. Hasan</h3>
+            <p class="spec">Cardiologist</p>
+            <p class="days"><strong>Days:</strong> Sat, Tue</p>
+            <p class="time"><strong>Time:</strong> 3:00 PM – 6:00 PM</p>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- Appointment Form Section -->
+    <section id="appointment"class="card form-section">
+        <h2>Book an Appointment</h2>
+        <p>Please fill-up this form:</p>
+
+        <form class="appointment-form">
+            <label for="pname">Patient Name:</label><br>
+            <input type="text" id="pname" name="pname" placeholder="Enter patient name" required><br><br>
+
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX" required><br><br>
+
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" min="1" max="120"><br><br>
+
+            <label for="doctor">Select Doctor:</label><br>
+            <select id="doctor" name="doctor" required>
+                <option value="">-- Choose a doctor --</option>
+                <option value="rahman_child">Dr. A. Rahman (Child Specialist)</option>
+                <option value="akter_skin">Dr. B. Akter (Skin Specialist)</option>
+                <option value="hasan_cardio">Dr. K. Hasan (Cardiologist)</option>
+            </select><br><br>
+
+            <label for="date">Preferred Date:</label><br>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="time">Preferred Time:</label><br>
+            <input type="time" id="time" name="time"><br><br>
+
+            <label for="note">Problem Description (Short):</label><br>
+            <textarea id="note" name="note" rows="4" cols="40"
+                      placeholder="Write a few words about the problem"></textarea><br><br>
+
+            <button type="submit">Submit Request</button>
+            <button type="reset">Clear</button>
+        </form>
+        <hr>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact & Location</h2>
+        <p>United Hospital, Dhaka, Bangladesh.</p>
+        <p>Phone: 01518928218</p>
+        <p>Email: unitedhospital@gmail.com</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <hr>
+        <p>&copy; Hospital Appointment Booking System.</p>
+    </footer>
+
+</body>
+</html>

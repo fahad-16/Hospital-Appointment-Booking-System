@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Hospital Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-hospital"></i>
+                <span>Smart Hospital</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#doctors" class="nav-link">Doctors</a></li>
+                <li><a href="#book" class="nav-link">Book Appointment</a></li>
+                <li><a href="admin.html" class="nav-link">Admin</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+   
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Best Healthcare <span>Experience</span></h1>
+            <p>Book appointments with top doctors. 24/7 Emergency Service Available</p>
+            <a href="#book" class="cta-btn">Book Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    
+    <section id="doctors" class="doctors">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Specialist <span>Doctors</span></h2>
+                <p>Meet our expert medical team</p>
+            </div>
+            <div class="doctors-grid" id="doctorsContainer">
+                <div class="loading-card">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading doctors...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="book" class="appointment">
+        <div class="container">
+            <div class="section-header">
+                <h2>Book <span>Appointment</span></h2>
+                <p>Fill the form to book your appointment</p>
+            </div>
+            <form id="appointmentForm" class="appointment-form">
+                <div class="form-group">
+                    <input type="text" name="patient_name" placeholder="Patient Name *" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="date" name="appointment_date" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="timeSelect" name="time_slot" required>
+                            <option value="">Select Time</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <select id="doctorSelect" name="doctor_id" required>
+                            <option value="">Select Doctor</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Phone Number *" required>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-calendar-check"></i> Book Appointment
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
